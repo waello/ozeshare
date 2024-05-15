@@ -6,13 +6,14 @@ import { SOCKET_URL } from '../config'
 type SocketContextType = {
   socket: Socket | null;
   connectSocket: () => void;
-}
+  disconnectSocket: () => void;
+};
 
 type SocketProviderProps = {
   children: JSX.Element
 }
 
-export const SocketContext = createContext<SocketContextType | null>(null)
+const SocketContext = createContext<SocketContextType | undefined>(undefined);
 
 export const SocketProvider = ({children}: SocketProviderProps) => {
   const [socket, setSocket] = useState<Socket | null>(null)

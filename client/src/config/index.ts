@@ -1,1 +1,1 @@
-export const SOCKET_URL = import.meta.env.MODE === 'development' ? 'http://localhost:5000' : 'https://locshare-xc0v.onrender.com'
+export const SOCKET_URL = import.meta.env.MODE === 'development' ? 'http://192.168.1.17:5000' : 'https://locshare-xc0v.onrender.com'
